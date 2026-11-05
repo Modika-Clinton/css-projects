@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Changelog Component</title>
+        <style>
+                body {
+                    border: 2px solid black;
+                    border-radius: 20px;
+                    font-family: cascadia mono;
+                    padding: 50px;
+                    max-width: fit-content;
+                    text-align: center;
+                }
+                p {
+                    font-size: small;
+                }
+                .timeline {
+                    position: relative;
+                    width: 600px;
+                }
+                .timeline::before {
+                    content: "";
+                    position: absolute;
+                    left: 33.5%;
+                    top: 0;
+                    bottom: 0;
+                    width: 2px;
+                    background: black;
+                    transform: translateX(-50%);
+                }
+                .row {
+                    display: grid;
+                    grid-template-columns: 2fr 20px 4fr;
+                    align-items: center;
+                    gap: 5px;
+                    margin-bottom: 10px;
+                    position: relative;
+                }
+                .left {
+                    color: #bbb;
+                    text-align: right;
+                    justify-content: center;
+                }
+                .right {
+                    text-align: left;
+                }
+                .dot {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    border: 2px solid black;
+                    background: black;
+                    outline: 2px solid black;
+                    justify-content: center;
+                    z-index: 1;
+                }
+                .box {
+                    background-color: black;
+                    color: white;
+                    width: 40%;
+                    height: 30px;
+                    border-radius: 10px;
+                    justify-content:center;
+                }
+
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1>Changelog</h1>
+            <p style="color: #bbb;">Here's everything we have shipped in the past few days</p>
+        </header><br><br>
+        <main>
+            <div class="timeline">
+                <div class="row">
+                    <p class="left">September 3, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Announcing Projects on Frontend Roadmap</p>
+                </div>
+                <div class="row">
+                    <p class="left">August 28, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Build your learning habits with learning streaks</p>
+                </div>
+                <div class="row">
+                    <p class="left">August 25, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Git and Github Roadmap</p>
+                </div>
+                <div class="row">
+                    <p class="left">August 22, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Submit your project solution and get feedback</p>
+                </div>
+                <div class="row">
+                    <p class="left">August 15, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Backend Projects Ideas</p>
+                </div>
+                <div class="row>">
+                    <p class="left">August 10, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Redis roadmap</p>
+                </div>
+                <div class="row">
+                    <p class="left">August 1, 2024</p>
+                    <p class="dot"></p>
+                    <p class="right">Changelog Page to help you stay in the loop</p>
+                </div>
+            </div>
+        </main><br><br>
+        <footer>
+            <div class="box">
+                <p>Visit Complete Changelog</p>
+            </div>
+        </footer>
+    </body>
+</html>
