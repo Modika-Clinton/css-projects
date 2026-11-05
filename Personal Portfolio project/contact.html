@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="C:\Users\USER\assets\professional_profile_photo.jpg">
+  <title>Contact Us - My Website</title>
+  <style>
+    body {
+      border: 2px solid black;
+      max-width: 50%;
+      font-family:  Arial, Helvetica, sans-serif;
+      padding: 30px;
+    }
+    nav {
+      float: right;
+      padding: 10px;
+      gap: 15px;
+    }
+     a:link {
+      color: green;
+    }
+    a:visited {
+      color: pink;
+    }
+    a:hover {
+      color: red;
+    }
+    a:active {
+      color: yellow;
+    }
+    form {
+      display: inline;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 50%;
+    }
+    /* Mobile */
+    @media (max-width: 600px) {
+      form {grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation & Header-->
+   <header>
+  <nav>
+    <a href="home-page.html">Home</a> /
+    <a href="projects.html">Projects</a> /
+    <a href="articles.html">Articles</a> /
+    <a href="contact.html">Contact</a>
+  </nav>
+   </header><br><br>
+  <hr>
+
+  <!-- Page Content -->
+  <h1>Contact Us</h1>
+  <p>Email us at: <em>support@example.com</em></p>
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required><br><br>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" required><br><br>
+    <label>Your Message:</label><br>
+    <textarea rows="6" cols="30"></textarea><br><br>
+    <input type="submit" value="Click to Send" style="background-color:lightblue">
+  </form><br><br>
+  <hr>
+  <footer>&copy; All rights reserved, MySite 2026</footer>
+
+</body>
+</html>
