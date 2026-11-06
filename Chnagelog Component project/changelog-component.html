@@ -38,10 +38,15 @@
                     margin-bottom: 10px;
                     position: relative;
                 }
+                div::nth-last-child {
+                    position: swap;
+                }
+                
                 .left {
                     color: #bbb;
                     text-align: right;
                     justify-content: center;
+                    margin-right: 20px;
                 }
                 .right {
                     text-align: left;
@@ -60,9 +65,11 @@
                     background-color: black;
                     color: white;
                     width: 40%;
-                    height: 30px;
+                    height: 35px;
+                    padding: 1px;
                     border-radius: 10px;
                     justify-content:center;
+                    margin-left: 25%;
                 }
 
             </style>
