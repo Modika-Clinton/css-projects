@@ -1,0 +1,127 @@
+body {
+  font-family: Cascadia mono;
+border: 1px solid #bbb;
+max-width: max-content;
+padding: 40px;
+}
+
+.wrap {
+width: 350px;
+}
+.card {
+width: 280px;
+border: 2px solid black;
+border-radius: 12px;
+padding: 20px;
+display: flex;
+}
+
+.person {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-top: 15px;
+}
+
+.photo {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.bubble {
+position: relative;
+margin-bottom: 25px;
+background-color: black;
+color: white;
+margin-bottom: 25px;
+}
+
+.bubble::after {
+content: "";
+position: absolute;
+bottom:-10px;
+left: 40px;
+width: 20px;
+height: 20px;
+background: black;
+clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.card-right {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 230px;
+width: 40%;
+}
+
+.ava {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.second {
+display: flex;
+gap: 15px;
+width: 650px;
+}
+.set {
+width: 260px;
+height: 300px;
+border-radius: 20px;
+object-fit: cover;
+padding: 10px;
+}
+
+.box1 {
+border: 2px solid black;
+border-radius: 20px;
+background: black;
+width: 400px;
+height: 200px;
+color: white;
+align-items: center;
+float: right;
+padding: 28px;
+position: relative;
+flex: 1;
+}
+
+.big-box {
+border: 2px solid black;
+border-radius: 10px;
+max-width: 80%;
+heigth: 400px;
+padding: 50px;
+text-align: center;
+position relative;
+}
+
+.cursor {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 25px;
+}
+
+.arrow {
+background: none;
+border: none;
+padding: 10px;
+}
+
+.avatar {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+object-fit; cover;
+}
+
+.avatar .active {
+width 60px;
+height: 60px;
+opacity; 1;
+}
