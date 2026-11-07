@@ -2,32 +2,51 @@ body {
   font-family: Cascadia mono;
 border: 1px solid #bbb;
 max-width: max-content;
-padding: 40px;
+padding: 80px;
+}
+
+.first {
+  display: flex;
+  gap: 30px;
 }
 
 .wrap {
-width: 350px;
+border: none;
+display:grid
 }
-.card {
+.card1 {
 width: 280px;
 border: 2px solid black;
 border-radius: 12px;
 padding: 20px;
-display: flex;
 }
 
-.person {
-display: flex;
+.person1 {
 align-items: center;
-gap: 12px;
+display: flex;
 margin-top: 15px;
 }
 
-.photo {
+.photo1 {
 width: 45px;
 height: 45px;
 border-radius: 50%;
 object-fit: cover;
+}
+
+.person2 {
+display: flex;
+align-items: center;
+gap: 5px;
+margin-top: 15px;
+}
+
+.photo2 {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+object-fit: cover;
+position: relative;
 }
 
 .bubble {
@@ -49,29 +68,25 @@ background: black;
 clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
-.card-right {
+.card2 {
+  width: 350px;
+border: 2px solid black;
+border-radius: 12px;
+padding: 20px;
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-min-height: 230px;
-width: 40%;
-}
-
-.ava {
-width: 50px;
-height: 50px;
-border-radius: 50%;
+height: 230px;
 }
 
 .second {
 display: flex;
-gap: 15px;
-width: 650px;
+gap: 5px;
 }
+
 .set {
-width: 260px;
-height: 300px;
-border-radius: 20px;
+width: 200px;
+height: 230px;
+border-radius: 30px;
 object-fit: cover;
 padding: 10px;
 }
@@ -80,31 +95,29 @@ padding: 10px;
 border: 2px solid black;
 border-radius: 20px;
 background: black;
-width: 400px;
-height: 200px;
+width: 55%;
+height: 180px;
 color: white;
 align-items: center;
-float: right;
-padding: 28px;
-position: relative;
-flex: 1;
+padding: 25px;
 }
 
 .big-box {
 border: 2px solid black;
 border-radius: 10px;
-max-width: 80%;
-heigth: 400px;
-padding: 50px;
+max-width: 85%;
+height: 200px;
+padding: 20px;
 text-align: center;
-position relative;
+margin-bottom: 10px;
+position: relative;
 }
 
 .cursor {
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 25px;
+gap: 20px;
 }
 
 .arrow {
@@ -117,11 +130,14 @@ padding: 10px;
 width: 45px;
 height: 45px;
 border-radius: 50%;
-object-fit; cover;
+object-fit: cover;
+opacity: 0.3;
 }
 
-.avatar .active {
-width 60px;
+.active {
+width: 60px;
 height: 60px;
-opacity; 1;
+border-radius: 50%;
+object-fit: cover;
+opacity: 1;
 }
