@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Grid Layout</title>
+        <style>
+            body {
+                padding: 80px;
+                align-items: center;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 650px;
+                height: 630px;
+                gap: 8px;
+                margin-left: 50px;
+            }
+            .col-1 {
+                display: block;
+                gap: 8px;
+            }
+            .img-1 {
+                height: 400px;
+                width: 200px;
+            }
+            .img-2 {
+                height: 200px;
+                width: 200px;
+            }
+            .col-2 {
+                display: block;
+                gap: 8px;
+            }
+            .img-3 {
+                width: 200px;
+                height: 200px;
+            }
+            .img-4 {
+                width: 200px;
+                height: 400px;
+            }
+            .col-3 {
+                display: block;
+                gap: 8px;
+            }
+            .img-5 {
+                height: 400px;
+                width: 200px;
+            }
+            .img-6 {
+                height: 200px;
+                width: 200px;
+            }
+            /*Tablet view*/
+            @media (max-width: 768px) {
+                .col-2 {grid-template-columns: 1fr 1fr;
+                flex-direction: column;}
+            }
+            /*Mobile view*/
+            @media (max-width: 600px) {
+                .col-3 {grid-template-columns: 1fr;
+                flex-direction: column;}
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <div class="col-1">
+                <img src="C:/Users/USER/assets/foggy-beach-with-rock.jpg" 
+                alt="Foggy Beach with Rocky Mountian" class="img-1"><br><br>
+                <img src="C:/Users/USER/assets/living-room-with-couch.jpg"
+                alt="Living Room with Couch and Round Window" class="img-2">
+            </div>
+            <div class="col-2">
+                <img src="C:/Users/USER/assets/table-with-plates.jpg"
+                alt="Dining Table with Plates" class="img-3"><br><br>
+                <img src="C:/Users/USER/assets/building-with-red-door.jpg"
+                alt="A Building with a Red Door and a Tree in front" class="img-4">
+            </div>
+            <div class="col-3">
+                <img src="C:/Users/USER/assets/row-of-apartments-next-to-street.jpg"
+                alt="A row of white apartmen buildings next to a street" class="img-5"><br><br>
+                <img src="C:/Users/USER/assets/beach-from-hill-top.jpg" class="img-6"
+                alt="A Beach view from hill top">
+            </div>
+        </main>
+    </body>
+</html>
