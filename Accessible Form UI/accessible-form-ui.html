@@ -4,35 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accessible Form UI</title>
+        <link rel="stylesheet" href="access-form-style.css">
     </head>
     <body>
         <main class="box">
             <div class="data">
                 <form action="/action_page.php">
                     <label for="name">Full Name</label><br>
-                    <input type="text" id="name" class="area"
-                    placeholder="What should we call you?" required><br>
+                    <input type="text" id="name" class="area" 
+                    placeholder="What should we call you?" required><br><br>
                     <label for="email">Email</label><br>
-                    <input type="email" id="email" class="area"
-                    value="john@doe.com" selected><br><br>
+                    <input type="email" id="email" class="error-input"
+                    value="john@doe.com" required>
+                    <p class="error-message">Email is already taken</p>
                     <label for="pswd">Enter Password</label><br>
                     <input type="password" id="pswd" class="area" 
-                    placeholder="xxxxxxxx" required><br>
+                    placeholder="xxxxxxxx" required><br><br>
                     <label for="pswd">Confirm Password</label><br>
                     <input type="password" id="pswd" class="area" 
-                    placeholder="xxxxxxxx" required><br>
-                    <input type="submit" value="Update Profile" class="area">
+                    placeholder="xxxxxxxx" required><br><br>
+                    <input type="submit" value="Update Profile" class="submit">
                 </form>
             </div>
             <div class="progress">
                 <div class="outer">
                     <div class="inner">65%</div>
                 </div>
-                <h3>Profile Completeness</h3>
+                <h4>Profile Completeness</h4>
                 <div class="fields">
-                    <p class="one">Create Account</p>
-                    <p class="two">Update Roadmap Progress</p>
-                    <p class="three">Setup Public Profile</p>
+                    <p class="stroke">Create Account</p>
+                    <p class="stroke">Update Roadmap Progress</p>
+                    <p class="stroke">Setup Public Profile</p>
                     <p>Complete your first project</p>
                     <p>Invite your Friends</p>
                 </div>

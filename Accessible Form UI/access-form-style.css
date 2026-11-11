@@ -1,0 +1,91 @@
+body {
+    padding: 50px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+.box {
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 410px;
+    width: 550px;
+    position: absolute;
+    display: flex;
+    padding: 40px;
+    gap: 30px;
+}
+.data {
+    display: block;
+    align-items: center;
+}
+form {
+    font-weight: bold;
+    text-align: justify;
+}
+.area {
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.error-input {
+    border: 2px solid red;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    color: red;
+}
+.error-message {
+    color: red;
+    font-size: small;
+}
+.submit {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 45px;
+    width: 220px;
+    border-radius: 10px;
+}
+.progress {
+    display: block;
+    position: relative;
+    gap: 40px;
+}
+.outer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(black 0% 65%, /*filled part*/
+     #ccc 65% 100% /*empty part*/);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: 75px;
+}
+.inner {
+    width: 92px;
+    height: 92px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+h4 {
+    text-align: center;
+}
+.fields {
+    border: 2px solid black;
+    height: 240px;
+    width: 270px;
+    border-radius: 15px;
+    background: #ccc;
+    text-align: center;
+    justify-content: center;
+}
+.stroke {
+    text-decoration: line-through;
+    font-weight: lighter;
+}
