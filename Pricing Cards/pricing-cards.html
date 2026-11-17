@@ -7,22 +7,39 @@
         <style>
             .container {
                 display: flex;
-                gap: 10px;
+                gap: 20px;
                 padding: 80px;
             }
             ul {
-                list-style-type: circle;
-                margin-left: -15px;
-            }
-            ul, li {
+                list-style-type: none;
                 text-align: left;
+                margin-left: -20px;
+                display: block;
             }
+            ul li  {
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+            }
+            ul li .check {display: inline-block;}
+            .check {
+                width: 15px;
+                height: 15px;
+                border: 1px solid #222;
+                border-radius: 50%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: 10px;
+                flex-shrink: 0;
+            }
+            
             hr {border: 1px solid black;}
             b {font-size: 25px;}
             .price-card {
                 border: 2px solid black;
-                width: 150px;
-                height: 340px;
+                width: 200px;
+                height: 350px;
                 border-radius: 15px;
                 text-align: center;
                 justify-content: center;
@@ -41,6 +58,18 @@
                 font-weight: bolder;
                 font-size: 40px;
             }
+            .badge {
+                position: absolute;
+                top: 68px;
+                left: 31%;
+                transform: translateX(-30%);
+                padding: 8px 18px;
+                border: 2px solid black;
+                background-color: tomato;
+                color: white;
+                border-radius: 7px;
+                white-space: nowrap;
+            }
             .pref {
                 background-color: tomato;
                 width: 140px;
@@ -52,7 +81,7 @@
     </head>
     <body>
         <div class="container"> <!--container for all price cards-->
-            <fieldset class="price-card"> <!--first price card-->
+            <div class="price-card"> <!--first price card-->
                 <h3>Basic</h3>
                 <p><span class="price"><b>$</b>9</span>/mo</p>
                 <p>Essential features <br>
@@ -60,36 +89,34 @@
                 </p>
                 <hr>
                 <ul>
-                    <li>1 user</li>
-                    <li>5 projects</li>
-                    <li>10 GB storage</li>
-                    <li>Email support</li>
-                    <li>Basic reports</li>
+                    <li><span class="check">&#10003</span> 1 user</li>
+                    <li><span class="check">&#10003</span> 5 projects</li>
+                    <li><span class="check">&#10003</span> 10 GB storage</li>
+                    <li><span class="check">&#10003</span> Email support</li>
+                    <li><span class="check">&#10003</span> Basic reports</li>
                 </ul>
                 <button class="others">Choose Basic</button>
-            </fieldset>
-            <!--second and prefered price card-->
-            <div class="tooltip">
-                <fieldset class="price-card">
-                    <h3>Pro</h3>
-                    <p><span class="prefered"><b>$</b>19</span>/mo</p>
-                    <p>
-                        Advanced tools for <br>
-                        growing teams.
-                    </p>
-                    <hr>
-                    <ul>
-                        <li>5 users</li>
-                        <li>50 projects</li>
-                        <li>100 GB storage</li>
-                        <li>priority support</li>
-                        <li>Advanced reports</li>
-                    </ul>
-                    <button class="pref">Choose Pro</button>
-                    <span class="tooltiptext">Most popular</span>
-                </fieldset>
             </div>
-            <fieldset class="price-card"> <!--third and last price card-->
+            <!--second and prefered price card-->
+            <div class="price-card">
+                <span class="badge">Most popular</span>
+                <h3>Pro</h3>
+                <p><span class="prefered"><b>$</b>19</span>/mo</p>
+                <p>
+                    Advanced tools for <br>
+                    growing teams.
+                </p>
+                <hr>
+                <ul>
+                    <li><span class="check">&#10003</span> 5 users</li>
+                    <li><span class="check">&#10003</span> 50 projects</li>
+                    <li><span class="check">&#10003</span> 100 GB storage</li>
+                    <li><span class="check">&#10003</span> priority support</li>
+                    <li><span class="check">&#10003</span> Advanced reports</li>
+                </ul>
+                <button class="pref">Choose Pro</button>
+            </div>
+            <div class="price-card"> <!--third and last price card-->
                 <h3>Business</h3>
                 <p><span class="price"><b>$</b>49</span>/mo</p>
                 <p>
@@ -98,14 +125,14 @@
                 </p>
                 <hr>
                 <ul>
-                    <li>Unlimited users</li>
-                    <li>Unlimited projects</li>
-                    <li>1 TB storage</li>
-                    <li>24/7 support</li>
-                    <li>Custom reports</li>
+                    <li><span class="check">&#10003</span> Unlimited users</li>
+                    <li><span class="check">&#10003</span> Unlimited projects</li>
+                    <li><span class="check">&#10003</span> 1 TB storage</li>
+                    <li><span class="check">&#10003</span> 24/7 support</li>
+                    <li><span class="check">&#10003</span> Custom reports</li>
                 </ul>
                 <button class="others">Choose Business</button>
-            </fieldset>
+            </div>
         </div>
     </body>
 </html>
