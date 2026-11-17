@@ -4,12 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pricing Cards</title>
+        <style>
+            .container {
+                display: flex;
+                gap: 10px;
+                padding: 80px;
+            }
+            ul {
+                list-style-type: circle;
+                margin-left: -15px;
+            }
+            ul, li {
+                text-align: left;
+            }
+            hr {border: 1px solid black;}
+            b {font-size: 25px;}
+            .price-card {
+                border: 2px solid black;
+                width: 150px;
+                height: 340px;
+                border-radius: 15px;
+                text-align: center;
+                justify-content: center;
+            }
+            .price {
+                font-weight: bolder;
+                font-size: 40px;
+            }
+            .others {
+                height: 35px;
+                width: 140px;
+                border-radius: 8px;
+            }
+            .prefered {
+                color: tomato;
+                font-weight: bolder;
+                font-size: 40px;
+            }
+            .pref {
+                background-color: tomato;
+                width: 140px;
+                height: 35px;
+                border-radius: 8px;
+                color: white;
+            }
+        </style>
     </head>
     <body>
         <div class="container"> <!--container for all price cards-->
-            <div class="price-card"> <!--first price card-->
+            <fieldset class="price-card"> <!--first price card-->
                 <h3>Basic</h3>
-                <p><span class="price">$9</span>/mo</p>
+                <p><span class="price"><b>$</b>9</span>/mo</p>
                 <p>Essential features <br>
                     to get started.
                 </p>
@@ -20,29 +65,33 @@
                     <li>10 GB storage</li>
                     <li>Email support</li>
                     <li>Basic reports</li>
-                </ul><br>
+                </ul>
                 <button class="others">Choose Basic</button>
+            </fieldset>
+            <!--second and prefered price card-->
+            <div class="tooltip">
+                <fieldset class="price-card">
+                    <h3>Pro</h3>
+                    <p><span class="prefered"><b>$</b>19</span>/mo</p>
+                    <p>
+                        Advanced tools for <br>
+                        growing teams.
+                    </p>
+                    <hr>
+                    <ul>
+                        <li>5 users</li>
+                        <li>50 projects</li>
+                        <li>100 GB storage</li>
+                        <li>priority support</li>
+                        <li>Advanced reports</li>
+                    </ul>
+                    <button class="pref">Choose Pro</button>
+                    <span class="tooltiptext">Most popular</span>
+                </fieldset>
             </div>
-            <div class="price-card"> <!--second and prefered price card-->
-                <h3>Pro</h3>
-                <p><span class="prefered">$19</span>/mo</p>
-                <p>
-                    Advanced tools for <br>
-                    growing teams.
-                </p>
-                <hr>
-                <ul>
-                    <li>5 users</li>
-                    <li>50 projects</li>
-                    <li>100 GB storage</li>
-                    <li>priority support</li>
-                    <li>Advanced reports</li>
-                </ul><br>
-                <button class="pref">Choose Pro</button>
-            </div>
-            <div class="price-card"> <!--third and last price card-->
+            <fieldset class="price-card"> <!--third and last price card-->
                 <h3>Business</h3>
-                <p><span class="price">$49</span>/mo</p>
+                <p><span class="price"><b>$</b>49</span>/mo</p>
                 <p>
                     Complete solution for <br>
                     large organizations.
@@ -54,9 +103,9 @@
                     <li>1 TB storage</li>
                     <li>24/7 support</li>
                     <li>Custom reports</li>
-                </ul><br>
+                </ul>
                 <button class="others">Choose Business</button>
-            </div>
+            </fieldset>
         </div>
     </body>
 </html>
