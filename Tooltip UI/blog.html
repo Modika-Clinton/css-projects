@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip UI - Blog</title>
+<style>
+    body {
+        border:2px solid black;
+        max-width: max-content;
+        padding: 40px;
+        font-family: 'Comic Sans MS';
+    }
+    nav {
+      float: right;
+      gap: 15px;
+      padding: 10px;
+      display: flex;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:link {
+      color: green;
+    }
+    a:visited {
+      color: pink;
+    }
+    a:hover {
+      color: red;
+    }
+    a:active {
+      color: yellow;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        padding: 5px 0;
+        width: 250px;
+        height: 40px;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -150px;
+    }
+    .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        display: flex;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>MyBlog</h1>
+        
+    <!--The navigation pane-->
+            <nav>
+            <a href="tooltip-ui.html">Home</a> .
+            <div class="tooltip"><a href="projects.html">Projects</a> .
+                <span class="tooltiptext">Here is everything I have built</span> 
+            <a href="blog.html">Blog</a> 
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h3>University of Buea Campuses</h3>
+            <p>
+                The university of Buea has three major campuses.<br>
+                Two of the campuses are around the Buea municipality.<br>
+                The last and most recent is in meme Kumba, 
+                the economic capital of southwest region.
+            </p>
+            <p>The images below are that of three different
+                campuses of the university of Buea.
+            </p>
+            <figure>
+                <ul>
+            <li>
+            
+                <img src="C:\Users\USER\Pictures\Screenshots\UB campus A.png" 
+                alt="Main campus of UB"
+                style="width:250px;height:200px;">
+                <figcaption>Campus A, main campus of UB.</figcaption>
+            </li>
+            <li>
+            <img src="C:\Users\USER\Pictures\Screenshots\UB campus B.png" 
+             alt="Faculty of Health Science"
+             style="width:200px;height:200px;">
+             <figcaption>Campus B, FHS campus of UB.</figcaption>
+            </li>
+            <li>
+                <img src="C:\Users\USER\Pictures\Screenshots\UB campus C.png" 
+                alt="HTTTC Kumba campus" 
+                style="width:250px;height:200px;">
+                <figcaption>Campus C, HTTTC campus of UB</figcaption>
+            </li>
+                </ul>
+            </figure>
+        </section>
+        <section>
+            <h3>Faculty of Engineering and Technology, FET</h3>
+            <p>
+                While in <abbr title="University of Buea">UB</abbr>,
+                I had the opportunity to study in one of the most 
+                prestigous faculty, FET and I did internship at CRTV Buea,<br>
+                see photo below of internship at CRTV.
+            </p><br>
+            <figure>
+            <ul>
+                <li>
+            <img src="C:\Users\USER\Desktop\pppp\crtv pic.jpg" 
+            alt="internship photo" style="width:550px;height:450px;">
+            <figcaption>internship photo at crtv buea</figcaption>
+            </figure>
+        </section>
+    </main>
+    <hr>
+    <footer>&copy; 2026 MyBlog. All rights reserved.</footer>
+</body>
+</html>

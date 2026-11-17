@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip UI - Home</title>
+<link rel="icon" type="image/x-icon" href="C:\Users\USER\assets\professional_profile_photo.jpg">
+<style>
+    body {
+        border:2px solid black;
+        height: 200px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav {
+      float: right;
+      gap: 15px;
+      padding: 10px;
+      display: flex;
+      margin-top: 100px;
+      margin-right: 150px;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:link {
+      color: green;
+    }
+    a:visited {
+      color: pink;
+    }
+    a:hover {
+      color: red;
+    }
+    a:active {
+      color: yellow;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 1;
+        padding: 5px 0;
+        width: 250px;
+        height: 40px;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -150px;
+    }
+    .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    /* Mobile */
+    @media (max-width: 600px) {
+      .nav {flex-direction: colimn; text-align: center;}
+    }
+</style>
+    <title>Tootltip UI - Home</title>
+</head>
+
+<body>
+    <!--Navigation Panel that controls my four web pages-->
+    
+        <nav>
+            <a href="tooltip-ui.html">Home</a> .
+            <div class="tooltip"><a href="projects.html">Projects</a> .
+                <span class="tooltiptext">Here is everything I have built</span>
+            <a href="blog.html">Blog</a>
+        </nav>
+</body>
+</html>
