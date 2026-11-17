@@ -43,6 +43,10 @@
                 border-radius: 15px;
                 text-align: center;
                 justify-content: center;
+                transition: transform 0.2s ease;
+            }
+            .popular:hover  {
+                transform: scale(1.1);
             }
             .price {
                 font-weight: bolder;
@@ -68,7 +72,6 @@
                 background-color: tomato;
                 color: white;
                 border-radius: 7px;
-                white-space: nowrap;
             }
             .pref {
                 background-color: tomato;
@@ -77,6 +80,20 @@
                 border-radius: 8px;
                 color: white;
             }
+            @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .price-card {
+        width: 100%;
+        max-width: 350px;
+        flex: none;
+    }
+    .popular {
+        transform: scale(1.03);
+    }
+}
         </style>
     </head>
     <body>
@@ -98,7 +115,7 @@
                 <button class="others">Choose Basic</button>
             </div>
             <!--second and prefered price card-->
-            <div class="price-card">
+            <div class="price-card popular">
                 <span class="badge">Most popular</span>
                 <h3>Pro</h3>
                 <p><span class="prefered"><b>$</b>19</span>/mo</p>
