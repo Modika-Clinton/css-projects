@@ -3,23 +3,141 @@
     <head>
         <meta charset="uft-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Theme Switcher with CSS Variables</title>
+         <style>
+            /* Root Color declaration */
+            :root {
+                --color-bg: #ffffff;
+                --color-surface: #ffffff;
+                --color-text: #171c24;
+                --color-muted: #687385;
+                --color-accent: #2864e8;
+                --color-border: #d5d9df;
+                --radius-md: 12px;
+            }
+            /* General declaration */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: arial, sans-serif;
+                background: #f4f5f7;
+                padding: 50px;
+            }
+            /* Theme container for all items */
+            .container {
+                width: 330px;
+                margin: auto;
+                padding: 25px;
+                background: var(--color-bg);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                transition: 0.5s;
+            }
+            /* Theme options for input variables */
+            .options input {
+                display: none;
+            }
+            .lab-but {
+                display: flex;
+                border: 1px solid var(--color-border);
+                border-radius: 5px;
+                overflow: hidden;
+                margin-bottom: 40px;
+            }
+            .lab-but label {
+                flex: 1;
+                text-align: center;
+                padding: 12px;
+                cursor: pointer;
+                border-right: 1px solid var(--color-border);
+                color: var(--color-text);
+            }
+            .lab-but label:last-child {
+                border-right: none;
+            }
+            /* Background and color for checked state  of labels */
+            #light:checked ~ .lab-but label[for="light"], 
+            #dark:checked ~ .lab-but label[for="dark"], 
+            #custom:checked ~ .lab-but label[for="custom"] {
+                background: var(--color-accent);
+                color: white;
+            }
+            /* Preveiw card for heading, paragraph and button */
+            .preview-card {
+                background: var(--color-surface);
+                color: var(--color-text);
+                transition: 0.5s;
+            }
+            .preview-card h1 {
+                margin-bottom: 15px;
+                font-size: 28px;
+            }
+            .preview-card p {
+                color: var(--color-muted);
+                line-height: 1.6;
+                margin-bottom: 25px;
+            }
+            .preview-card button {
+                background: var(--color-accent);
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            /* Overiding root colors for checked state */
+            .container:has(#light:checked) {
+                --color-bg: #ffffff;
+                --color-surface: #ffffff;
+                --color-text: #171c24;
+                --color-muted: #687385;
+                --color-acent: #2864e8;
+                --color-border: #d5d9df;
+            }
+            .container:has(#dark:checked) {
+                --color-bg: #1c232b;
+                --color-surface: #1c232b;
+                --color-text: #ffffff;
+                --color-muted: #c4cbd3;
+                --color-accent: #2864e8;
+                --color-border: #414a55;
+            }
+            .container:has(#custom:checked) {
+                --color-bg: #fffdf3;
+                --color-surface: #fffdf3;
+                --color-text: #16351c;
+                --color-muted: #61754e;
+                --color-accent: #248c49;
+                --color-border: #dedfca;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <ul>
-                <li><a href="#light">Light</a></li>
-                <li><a href="#dark">Dark</a></li>
-                <li><a href="#custom">Custom</a></li>
-            </ul>
-        </header>
-        <mian>
-            <h2>Hello, World!</h2>
-            <p>
-                This is a simple card that changes <br>
-                theme with CSS variables.
-            </p>
-            <button>Primary Button</button>
-        </mian>
+        <div class="container">
+            <!--Theme options for radio inputs-->
+            <div class="options">
+                <input type="radio" name="theme" id="light" checked>
+                <input type="radio" name="theme" id="dark">
+                <input type="radio" name="theme" id="custom">
+                <!--Label for theme buttons-->
+                <div class="lab-but">
+                    <label for="light">Light</label>
+                    <label for="dark">Dark</label>
+                    <label for="custom">Custom</label>
+                </div>
+            </div>
+            <div class="preview-card">
+                <h1>Hello, World!</h1>
+                <p>
+                    This is a simple card that changes <br>
+                    theme with CSS variables.
+                </p>
+                <button>Primary Button</button>
+            </div>
+        </div>
     </body>
 </html>
