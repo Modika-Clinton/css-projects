@@ -6,75 +6,62 @@ padding: 80px;
 }
 
 .first {
-  display: flex;
-  gap: 30px;
-}
-
-.wrap {
 border: none;
-display:grid
+display:flex;
+gap: 30px;
 }
-.card1 {
-width: 280px;
-border: 2px solid black;
+.card {
+  width: 330px;
 border-radius: 12px;
 padding: 20px;
+height: 230px;
+}
+.card1 {
+width: 330px;
+border: 2px solid black;
+border-radius: 12px;
+justify-content: center;
+padding: 7px;
 }
 
-.person1 {
-align-items: center;
-display: flex;
-margin-top: 15px;
-}
-
-.photo1 {
-width: 45px;
-height: 45px;
-border-radius: 50%;
-object-fit: cover;
-}
-
-.person2 {
+.person {
 display: flex;
 align-items: center;
 gap: 5px;
-margin-top: 15px;
+margin-top: 10px;
 }
 
-.photo2 {
+.photo {
 width: 45px;
 height: 45px;
+padding: 5px;
 border-radius: 50%;
 object-fit: cover;
-position: relative;
 }
 
 .bubble {
 position: relative;
-margin-bottom: 25px;
+margin-top: -20px;
 background-color: black;
 color: white;
-margin-bottom: 25px;
 }
 
 .bubble::after {
 content: "";
 position: absolute;
-bottom:-10px;
-left: 40px;
-width: 20px;
-height: 20px;
+bottom:-12px;
+left: 20px;
+width: 25px;
+height: 25px;
 background: black;
-clip-path: polygon(0 0, 100% 0, 50% 100%);
+clip-path: polygon(5% 50%, 100% 40%, 45% 95%);
 }
 
 .card2 {
-  width: 350px;
+  width: 340px;
 border: 2px solid black;
 border-radius: 12px;
 padding: 20px;
-display: flex;
-flex-direction: column;
 height: 230px;
 }
 
@@ -95,17 +82,17 @@ padding: 10px;
 border: 2px solid black;
 border-radius: 20px;
 background: black;
-width: 55%;
+width: 510px;
 height: 180px;
 color: white;
 align-items: center;
 padding: 25px;
 }
 
-.big-box {
+.third {
 border: 2px solid black;
 border-radius: 10px;
-max-width: 85%;
+max-width: 730px;
 height: 200px;
 padding: 20px;
 text-align: center;
